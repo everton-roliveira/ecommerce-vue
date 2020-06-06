@@ -1,0 +1,26 @@
+/**
+ * Radius
+ * Getter example:
+ * .avatar { @include radius(circle); }
+ */
+$arr-radius: (
+  circle: 50%,
+  x-small: 2px,
+  small: 4px,
+  medium: 5px,
+  x-medium: 6px,
+  big: 10px,
+  pill: 15rem,
+);
+
+%radius {
+  @each $name, $size in $arr-radius {
+    &-#{$name} {
+      border-radius: #{$size};
+    }
+  }
+}
+
+@mixin radius($radius) {
+  border-radius: map-get($arr-radius, $radius);
+}

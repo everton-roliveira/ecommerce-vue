@@ -1,0 +1,11 @@
+.header-page {
+  margin-bottom: 40px;
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  &__description {
+    @include font-weight(bold);
+    font-size: 1rem;
+  }
+}

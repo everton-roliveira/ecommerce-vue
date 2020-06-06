@@ -1,0 +1,48 @@
+/* #region ####################### MIXIN UTEIS ################################ */
+
+@mixin align($vertical: true, $horizontal: false, $position: relative) {
+  @if $position {
+    position: $position;
+  }
+
+  @if $vertical {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @if $horizontal {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@mixin pseudo($pos: absolute, $display: block, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin truncate($truncation-boundary) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**
+ * Button Invert
+ * Getter example:
+ * @include buttonInvert(color(brand, primary), #ffffff);
+ */
+
+@mixin buttonInvert($primary, $secundary) {
+  border: 1px solid;
+  border-color: $primary;
+  color: $primary;
+  background: $secundary;
+
+  &:hover:not(:disabled) {
+    background: $primary;
+    color: $secundary;
+  }
+}

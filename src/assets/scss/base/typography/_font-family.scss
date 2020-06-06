@@ -1,0 +1,22 @@
+/**
+ * Font family
+ * Getter exemple:
+ * .title { @include font-family('primary'); }
+ */
+$font-families: (
+  "primary": "Open Sans",
+  "secondary": "Helvetica, Arial, sans-serif",
+  monospace: monospace,
+);
+
+%font-family {
+  @each $name, $family in $font-families {
+    &-#{$name} {
+      font-family: "#{$family}";
+    }
+  }
+}
+
+@mixin font-family($family) {
+  font-family: #{map-get($font-families, $family)};
+}

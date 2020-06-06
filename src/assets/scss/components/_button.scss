@@ -1,0 +1,118 @@
+/* 
+  * btn is primary
+  * Getter example:
+  * <button class="btn btn-small">Exemplo</button>
+  */
+.btn {
+  @include radius(small);
+  @extend %elevation-button;
+  border: none;
+  background: color(brand, primary);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+  letter-spacing: 0.08rem;
+  transition-duration: 0.3s;
+  &:hover {
+    background: darken(color(brand, primary), 15);
+  }
+
+  /* 
+    * btn size
+    * Getter example:
+    * <button class="btn btn-small">Exemplo</button>
+  */
+  &__small {
+    padding: 5px;
+  }
+  &__big {
+    padding: 15px 40px;
+  }
+
+  /* 
+    * btn inverter
+    * Getter example:
+    * <button class="btn outline">Exemplo</button>
+    * <button class="btn outline--info">Exemplo</button>
+  */
+  &.outline {
+    @include buttonInvert(color(brand, primary), #ffffff);
+
+    &--info {
+      @include buttonInvert(color(support, info, dark), #ffffff);
+    }
+    &--success {
+      @include buttonInvert(color(support, success, dark), #ffffff);
+    }
+    &--warning {
+      @include buttonInvert(color(support, warning, dark), #ffffff);
+    }
+    &--danger {
+      @include buttonInvert(color(support, danger, dark), #ffffff);
+    }
+  }
+
+  /* 
+    * btn font weight bold
+    * Getter example:
+    * <button class="btn btn--bold">Exemplo</button>
+    * <button class="btn outline--danger btn--bold">Exemplo</button>
+  */
+  &--bold {
+    @include font-weight(bold);
+  }
+
+  /* 
+    * btn modifiers
+    * Getter example:
+    * <button class="btn btn--success">Exemplo</button>
+  */
+  &--info {
+    background: color(support, info, dark);
+    &:hover {
+      background: darken(color(support, info, dark), 15);
+    }
+  }
+  &--success {
+    background: color(support, success, dark);
+    &:hover {
+      background: darken(color(support, success, dark), 15);
+    }
+  }
+  &--warning {
+    background: color(support, warning, dark);
+    &:hover {
+      background: darken(color(support, warning, dark), 15);
+    }
+  }
+  &--danger {
+    background: color(support, danger, dark);
+    &:hover {
+      background: darken(color(support, danger, dark), 15);
+    }
+  }
+
+  /* 
+    * btn secondary
+    * Getter example:
+    * <button class="btn btn__secondary">Exemplo</button>
+    * <button class="btn btn__secondary btn--bold">Exemplo</button>
+  */
+  &__secondary {
+    background: color(brand, secondary);
+    &:hover {
+      background: lighten(color(brand, secondary), 15);
+    }
+
+    /* 
+    * btn secondary
+    * Getter example:
+    * <button class="btn btn__secondary outline">Exemplo</button>
+    * <button class="btn btn__secondary outline btn--bold">Exemplo</button>
+  */
+    &.outline {
+      @include buttonInvert(color(brand, secondary), #ffffff);
+    }
+  }
+}

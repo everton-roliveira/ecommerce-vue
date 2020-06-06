@@ -1,0 +1,27 @@
+/**
+ * Font family
+ * Getter exemple:
+ * .title { @include font-size(small); }
+ */
+$font-sizes: (
+  xx-big: 25px,
+  x-big: 20px,
+  big: 16px,
+  x-medium: 15,
+  medium: 13px,
+  small: 12px,
+  x-small: 11px,
+  xx-small: 10px,
+);
+
+%font-size {
+  @each $name, $size in $font-sizes {
+    &-#{$name} {
+      font-size: #{$size};
+    }
+  }
+}
+
+@mixin font-size($size) {
+  font-size: map-get($font-sizes, $size);
+}

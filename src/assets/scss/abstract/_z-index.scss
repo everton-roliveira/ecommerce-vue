@@ -1,0 +1,21 @@
+/**
+ * Indexes
+ * Getter exemple:
+ * .modal { @include z-index; }
+ */
+
+$z-indexes: (
+  modal: 100,
+);
+
+%z-index {
+  @each $name, $z-index-value in $z-indexes {
+    &-#{$name} {
+      z-index: #{$z-index-value};
+    }
+  }
+}
+
+@mixin z-index($z-index-value) {
+  z-index: #{map-get($z-indexes, $z-index-value)};
+}

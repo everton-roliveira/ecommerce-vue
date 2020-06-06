@@ -1,0 +1,32 @@
+/**
+ * Shadows
+ * Getter exemple:
+ * .card { @extend %elevation-button; }
+ */
+
+/* 
+Suggest by Dextra:
+$elevations: (
+  button: '0 4px 2px 0',
+  cardMenu: '0 2px 4px 0'
+);
+*/
+
+$elevations: (
+  button: "0 4px 2px 0",
+  cardMenu: "0 2px 4px 0",
+);
+
+$default-color: rgba(color(neutral, black), 0.15);
+
+%elevation {
+  @each $name, $elevation in $elevations {
+    &-#{$name} {
+      box-shadow: #{$elevation} #{$default-color};
+    }
+  }
+}
+
+@mixin elevation($elevation, $color: $default-color) {
+  box-shadow: #{map-get($elevations, $elevation)} #{$color};
+}

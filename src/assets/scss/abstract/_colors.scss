@@ -1,0 +1,81 @@
+/**
+ * Colors
+ * Getter example:
+ * .brand { color: color(brand, primary) }
+ * .text-color { color: color(neutral, black) }
+ */
+$colors: (
+  brand: (
+    primary: (
+      default: #4b8,
+    ),
+    secondary: (
+      default: #234,
+    ),
+  ),
+  product: (
+    primary: (
+      light: #5c5c5c,
+      default: #343434,
+      dark: #272727,
+    ),
+    accent: (
+      light: #7d7d7d,
+      default: #5d5d5d,
+      dark: #454545,
+    ),
+  ),
+  neutral: (
+    black: (
+      light: #484848,
+      default: #282828,
+      dark: #191919,
+    ),
+    grey: (
+      light: #a1a4a7,
+      default: #888a8d,
+      dark: #707274,
+    ),
+    concrete: (
+      light: #f2f2f2,
+      default: #e5e5e5,
+      dark: #dadada,
+    ),
+    snow: (
+      light: #fdfdfd,
+      default: #f9f9f9,
+      dark: #f0f0f0,
+    ),
+  ),
+  support: (
+    info: (
+      light: #b0e5ff,
+      default: #1fb6ff,
+      dark: #0b8dcc,
+    ),
+    success: (
+      light: #abffd0,
+      default: #13ce66,
+      dark: #079446,
+    ),
+    warning: (
+      light: #ffe59c,
+      default: #ffc82c,
+      dark: #e7ae0a,
+    ),
+    danger: (
+      light: #ffbfbf,
+      default: #ff4949,
+      dark: #b32121,
+    ),
+  ),
+) !default;
+
+@function color($name, $variant, $brightness: default) {
+  $color: map-get(map-get($colors, $name), $variant);
+  @return map-get($color, $brightness);
+}
+
+@function ads-palette($new-colors) {
+  @return recursive-map-merge($colors, $new-colors);
+}

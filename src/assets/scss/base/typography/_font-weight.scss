@@ -1,0 +1,22 @@
+/**
+ * Font weight
+ * Getter exemple:
+ * .title { @include font-weight(regular); }
+ */
+$font-weights: (
+  thin: 300,
+  regular: 400,
+  bold: 700,
+);
+
+%font-weight {
+  @each $name, $weight in $font-weights {
+    &-#{$name} {
+      font-weight: #{$weight};
+    }
+  }
+}
+
+@mixin font-weight($weight) {
+  font-weight: map-get($font-weights, $weight);
+}
