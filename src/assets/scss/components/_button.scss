@@ -5,7 +5,7 @@
   */
 .btn {
   @include radius(small);
-  @extend %elevation-button;
+  @extend %elevation-e2;
   border: none;
   background: color(brand, primary);
   color: #ffffff;
