@@ -1,0 +1,49 @@
+{
+  "user": {
+    "id": "5ed91ebc8a49b4a595984621",
+    "email": "everton_roliveira@outlook.com",
+    "password": "admin",
+    "name": "Everton Roberto de Oliveira",
+    "zip_code": "04918110",
+    "street": "Rua Hélio Jacy Gouveia",
+    "number": "42",
+    "complement": "Casa 4",
+    "neighborhood": "Jd Souza",
+    "state": "SP"
+  },
+  "product": [
+    {
+      "id": "5ed91ef6fc30b3ef88e4b0e3",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Macbook Pro 13'",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "17500",
+      "amount": 5,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ed91efd8834521a30eaa3fa",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Apple Watch Series 5",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "3415",
+      "amount": 3,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5edc40a9601aada5bd85af50",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "iPhone 11 Pro",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "6999",
+      "amount": 7,
+      "sold": "false",
+      "images": []
+    }
+  ]
+}
