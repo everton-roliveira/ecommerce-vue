@@ -4,28 +4,26 @@
       <img src alt />
       <h2 class="product__name">{{product.name}}</h2>
       <p class="product__price">{{product.price}}</p>
-      {{url}}
     </article>
   </section>
 </template>
 
 <script>
 import { productService } from "@/services/product";
+import { serialize } from "@/helpers";
+
 export default {
   name: "List",
   data() {
     return {
-      products: []
+      products: [],
+      productsPerPage: 9
     };
   },
   computed: {
     url() {
-      let queryString = "";
-      for (let key in this.$route.query) {
-        queryString += `&${key}=${this.$route.query[key]}`;
-      }
-
-      return `/product?_limit=10${queryString}`;
+      let queryString = serialize(this.$route.query);
+      return `/product?_limit=${this.productsPerPage}${queryString}`;
     }
   },
   methods: {
