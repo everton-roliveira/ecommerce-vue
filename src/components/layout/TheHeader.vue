@@ -21,6 +21,7 @@ header {
   display: flex;
   padding: 15px 30px;
   background: #fff;
+  margin-bottom: 30px;
 
   nav {
     display: flex;
