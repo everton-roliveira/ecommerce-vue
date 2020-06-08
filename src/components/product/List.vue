@@ -2,16 +2,20 @@
   <div class="container-showcase">
     <section class="showcase">
       <article class="showcase__product" v-for="product in products" :key="product.id">
-        <img src="@/assets/images/products/macbook_pro.jpg" alt />
-        <p class="showcase__product__price">{{product.price}}</p>
-        <h2 class="showcase__product__name">{{product.name}}</h2>
+        <router-link to="/">
+          <img src="@/assets/images/products/macbook_pro.jpg" alt />
+          <p class="showcase__product__price">{{product.price}}</p>
+          <h2 class="showcase__product__name">{{product.name}}</h2>
+        </router-link>
       </article>
     </section>
+    <Pagination :itemsPerPage="this.productsPerPage" :totalItems="this.totalProducts" />
   </div>
 </template>
 
 <script>
 import { productService } from "@/services/product";
+import Pagination from "@/components/product/Pagination";
 import { serialize } from "@/helpers";
 
 export default {
@@ -19,7 +23,8 @@ export default {
   data() {
     return {
       products: [],
-      productsPerPage: 9
+      productsPerPage: 9,
+      totalProducts: 0
     };
   },
   computed: {
@@ -28,11 +33,16 @@ export default {
       return `/product?_limit=${this.productsPerPage}${queryString}`;
     }
   },
+  components: {
+    Pagination
+  },
   methods: {
     getAllProducts() {
-      productService
-        .getAllProducts(this.url)
-        .then(products => (this.products = products));
+      productService.getAllProducts(this.url).then(response => {
+        console.log(response);
+        this.totalProducts = Number(response.headers["x-total-count"]);
+        this.products = response.data;
+      });
     }
   },
   watch: {

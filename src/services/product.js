@@ -6,6 +6,6 @@ const axiosInstance = axios.create({
 
 export const productService = {
   getAllProducts(endpoint) {
-    return axiosInstance.get(endpoint).then((response) => response.data);
+    return axiosInstance.get(endpoint).then((response) => response);
   },
 };
