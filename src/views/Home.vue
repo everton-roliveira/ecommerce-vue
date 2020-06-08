@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import List from "@/components/product/Search";
-import Search from "@/components/product/List";
+import Search from "@/components/product/Search";
+import List from "@/components/product/List";
 
 export default {
   name: "Home",
   components: {
-    List,
-    Search
+    Search,
+    List
   }
 };
 </script>
