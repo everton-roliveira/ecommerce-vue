@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       products: [],
-      productsPerPage: 3,
+      productsPerPage: 9,
       totalProducts: 0
     };
   },
