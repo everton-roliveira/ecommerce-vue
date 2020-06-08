@@ -11,8 +11,19 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
+import {
+  faAngleDoubleLeft,
+  faAngleDoubleRight,
+} from "@fortawesome/free-solid-svg-icons";
 
-library.add(faCopyright, faFacebook, faInstagram, faPinterest);
+library.add(
+  faCopyright,
+  faFacebook,
+  faInstagram,
+  faPinterest,
+  faAngleDoubleLeft,
+  faAngleDoubleRight
+);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

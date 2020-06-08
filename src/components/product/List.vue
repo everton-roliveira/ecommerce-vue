@@ -23,7 +23,7 @@ export default {
   data() {
     return {
       products: [],
-      productsPerPage: 9,
+      productsPerPage: 3,
       totalProducts: 0
     };
   },
@@ -39,7 +39,6 @@ export default {
   methods: {
     getAllProducts() {
       productService.getAllProducts(this.url).then(response => {
-        console.log(response);
         this.totalProducts = Number(response.headers["x-total-count"]);
         this.products = response.data;
       });
