@@ -55,6 +55,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
+  row-gap: 40px;
   margin: 30px;
   &__product {
     @extend %elevation-e4;

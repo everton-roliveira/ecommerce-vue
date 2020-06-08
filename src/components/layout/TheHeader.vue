@@ -17,7 +17,7 @@ export default {
 
 <style scoped lang="scss">
 header {
-  @extend %elevation-e3;
+  @extend %elevation-e4;
   display: flex;
   padding: 15px 30px;
   background: #fff;

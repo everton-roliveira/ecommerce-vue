@@ -1,0 +1,16 @@
+input,
+textarea {
+  @extend %elevation-e3;
+  @include radius(small);
+  border: 1px solid #ffffff;
+  padding: 15px;
+  transition: all 0.3s;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  &:focus,
+  &:hover {
+    @extend %elevation-e4;
+    outline: none;
+    border-color: color(brand, primary);
+  }
+}
