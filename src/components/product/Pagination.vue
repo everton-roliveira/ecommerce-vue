@@ -92,10 +92,10 @@ export default {
       display: inline-block;
       a {
         @include radius(x-small);
+        @include font-size(big);
         padding: 5px 15px;
         margin: 4px;
         transition: all 0.3s;
-        font-size: 1.1rem;
         color: color(neutral, black, light);
         &.router-link-exact-active,
         &:hover:not(.page-disabled) {
