@@ -35,7 +35,106 @@
       "images": []
     },
     {
-      "id": "5edc40a9601aada5bd85af50",
+      "id": "5ede5979fbdf2853310c203d",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "iPhone 11 Pro",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "6999",
+      "amount": 7,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede598908e3919cd47d8b9c",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Macbook Pro 13'",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "17500",
+      "amount": 5,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede599257513d70fc64fc9b",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Apple Watch Series 5",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "3415",
+      "amount": 3,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede5b941a553c22c3278997",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "iPhone 11 Pro",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "6999",
+      "amount": 7,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede59a240c28e3b9c08f611",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Macbook Pro 13'",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "17500",
+      "amount": 5,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede59aebd638cf54020c767",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Apple Watch Series 5",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "3415",
+      "amount": 3,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede59b3673e58f14dd1bc8c",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "iPhone 11 Pro",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "6999",
+      "amount": 7,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede5baffdc903d3220b50e1",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Macbook Pro 13'",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "17500",
+      "amount": 5,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede5bab00a0890f504b9009",
+      "user_id": "5ed91ebc8a49b4a595984621",
+      "name": "Apple Watch Series 5",
+      "description": "Breve descrição",
+      "especification": "Especificações técnicas",
+      "price": "3415",
+      "amount": 3,
+      "sold": "false",
+      "images": []
+    },
+    {
+      "id": "5ede5ba4db98e8be48fbb896",
       "user_id": "5ed91ebc8a49b4a595984621",
       "name": "iPhone 11 Pro",
       "description": "Breve descrição",
