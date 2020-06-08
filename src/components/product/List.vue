@@ -1,15 +1,29 @@
 <template>
-  <div class="container-showcase">
-    <section class="showcase">
-      <article class="showcase__product" v-for="product in products" :key="product.id">
-        <router-link to="/">
-          <img src="@/assets/images/products/macbook_pro.jpg" alt />
-          <p class="showcase__product__price">{{product.price}}</p>
-          <h2 class="showcase__product__name">{{product.name}}</h2>
-        </router-link>
-      </article>
-    </section>
-    <Pagination :itemsPerPage="this.productsPerPage" :totalItems="this.totalProducts" />
+  <div>
+    <div class="container-showcase">
+      <transition mode="out-in">
+        <div v-if="products && products.length" key="products">
+          <section class="showcase">
+            <article class="showcase__product" v-for="product in products" :key="product.id">
+              <router-link to="/">
+                <img src="@/assets/images/products/macbook_pro.jpg" alt />
+                <p class="showcase__product__price">{{product.price}}</p>
+                <h2 class="showcase__product__name">{{product.name}}</h2>
+              </router-link>
+            </article>
+          </section>
+          <Pagination :itemsPerPage="this.productsPerPage" :totalItems="this.totalProducts" />
+        </div>
+        <div
+          v-else-if="products && products.length === 0"
+          class="without-result"
+          key="without-result"
+        >
+          <p>Busca sem resultados. Tente buscar outro termo.</p>
+        </div>
+        <PageLoading v-else key="loading" />
+      </transition>
+    </div>
   </div>
 </template>
 
@@ -38,10 +52,13 @@ export default {
   },
   methods: {
     getAllProducts() {
-      productService.getAllProducts(this.url).then(response => {
-        this.totalProducts = Number(response.headers["x-total-count"]);
-        this.products = response.data;
-      });
+      this.products = null;
+      setTimeout(() => {
+        productService.getAllProducts(this.url).then(response => {
+          this.totalProducts = Number(response.headers["x-total-count"]);
+          this.products = response.data;
+        });
+      }, 1500);
     }
   },
   watch: {
@@ -59,6 +76,12 @@ export default {
 .container-showcase {
   max-width: 1200px;
   margin: 0 auto;
+  .without-result {
+    @include font-size(xx-big);
+    @include font-weight(bold);
+    text-align: center;
+    color: color(neutral, black, light);
+  }
 }
 .showcase {
   display: grid;
@@ -80,7 +103,7 @@ export default {
       position: relative;
     }
     img {
-      border-radius: 4px;
+      @include radius(small);
       margin-bottom: 20px;
     }
     &__price {
@@ -92,7 +115,6 @@ export default {
       margin-bottom: 10px;
       color: color(neutral, black, light);
     }
-    // url("")
   }
 }
 </style>
