@@ -34,7 +34,7 @@
 
 ## <h2 id="about-dependency">**Dependências**</h2>
 
-### <h3>**Unica dependência para desenvolvimento do projeto é o [json-server](https://www.npmjs.com/package/json-server). Para rodar api mock**</h3>
+### <h4>**Unica dependência para desenvolvimento do projeto é o [json-server](https://www.npmjs.com/package/json-server). Para rodar api mock**</h4>
 
 ### <h3 id="install-json-serve">**`Instalação do json-server`**</h3>
 
