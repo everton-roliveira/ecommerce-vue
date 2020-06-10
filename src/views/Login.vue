@@ -29,6 +29,12 @@ export default {
   },
   components: {
     CreateLogin
+  },
+  methods: {
+    logInto() {
+      this.$store.dispatch("getUser", this.login.email);
+      this.$router.push({ name: "user" });
+    }
   }
 };
 </script>
