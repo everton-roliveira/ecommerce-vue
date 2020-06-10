@@ -5,6 +5,7 @@ import store from "./store";
 import PageLoading from "@/components/layout/PageLoading";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import numberPrice from "@/shared/filters/numberPrice";
 
 import {
   faFacebook,
@@ -29,6 +30,8 @@ library.add(
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
+
+Vue.filter("numberPrice", numberPrice);
 
 Vue.component("PageLoading", PageLoading);
 
