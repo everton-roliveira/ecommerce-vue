@@ -1,16 +1,32 @@
 {
-  "user": {
-    "id": "5ed91ebc8a49b4a595984621",
-    "email": "everton_roliveira@outlook.com",
-    "password": "admin",
-    "name": "Everton Roberto de Oliveira",
-    "zip_code": "04918110",
-    "street": "Rua Hélio Jacy Gouveia",
-    "number": "42",
-    "complement": "Casa 4",
-    "neighborhood": "Jd Souza",
-    "state": "SP"
-  },
+  "user": [
+    {
+      "id": "everton_roliveira@outlook.com",
+      "email": "everton_roliveira@outlook.com",
+      "password": "admin",
+      "name": "Everton Roberto de Oliveira",
+      "zip_code": "04918110",
+      "street": "Rua Hélio Jacy Gouveia",
+      "city": "São Paulo",
+      "number": "42",
+      "complement": "Casa 4",
+      "neighborhood": "Jd Souza",
+      "state": "SP"
+    },
+    {
+      "id": "bah.amaral@bol.com.br",
+      "email": "bah.amaral@bol.com.br",
+      "password": "admin",
+      "name": "Bárbara Amaral do Nascimento",
+      "zip_code": "06665020",
+      "street": "Rua Yoshihiro Iwahashi",
+      "city": "Itapevi",
+      "number": "1710",
+      "complement": "T2 apt 37",
+      "neighborhood": "Conjunto Habitacional Setor A",
+      "state": "SP"
+    }
+  ],
   "product": [
     {
       "id": "5ed91ef6fc30b3ef88e4b0e3",
