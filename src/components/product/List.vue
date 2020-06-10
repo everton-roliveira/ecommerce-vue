@@ -5,9 +5,9 @@
         <div v-if="products && products.length" key="products">
           <section class="showcase">
             <article class="showcase__product" v-for="product in products" :key="product.id">
-              <router-link to="/">
+              <router-link :to="{name: 'product', params: {id: product.id}}">
                 <img src="@/assets/images/products/macbook_pro.jpg" alt />
-                <p class="showcase__product__price">{{product.price}}</p>
+                <p class="showcase__product__price">{{product.price | numberPrice}}</p>
                 <h2 class="showcase__product__name">{{product.name}}</h2>
               </router-link>
             </article>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { productService } from "@/services/product";
+import { api } from "@/services/api";
 import Pagination from "@/components/product/Pagination";
 import { serialize } from "@/helpers";
 
@@ -54,7 +54,7 @@ export default {
     getAllProducts() {
       this.products = null;
       setTimeout(() => {
-        productService.getAllProducts(this.url).then(response => {
+        api.get(this.url).then(response => {
           this.totalProducts = Number(response.headers["x-total-count"]);
           this.products = response.data;
         });
