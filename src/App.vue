@@ -2,7 +2,9 @@
   <div id="app">
     <TheHeader />
     <main>
-      <router-view />
+      <transition>
+        <router-view />
+      </transition>
     </main>
     <TheFooter />
   </div>
@@ -42,6 +44,7 @@ body {
 
   main {
     flex: 1;
+    padding: 30px;
   }
 }
 </style>
