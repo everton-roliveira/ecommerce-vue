@@ -9,3 +9,7 @@ export const api = {
     return axiosInstance.get(endpoint).then((response) => response);
   },
 };
+
+export function getAddress(zipCode) {
+  return axios.get(`https://viacep.com.br/ws/${zipCode}/json/`);
+}
